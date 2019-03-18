@@ -1,0 +1,23 @@
+{
+  "name": "stimulus-google-picker",
+  "version": "0.1.0",
+  "description": "Stimulus-GooglePicker",
+  "main": "stimulus-google-picker.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raicheff/stimulus-google-picker.git"
+  },
+  "keywords": [
+    "stimulus",
+    "dropbox"
+  ],
+  "author": "Boris Raicheff",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/raicheff/stimulus-google-picker/issues"
+  },
+  "homepage": "https://github.com/raicheff/stimulus-google-picker#readme"
+}
