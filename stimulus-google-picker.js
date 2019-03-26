@@ -93,9 +93,14 @@ export default class extends Controller {
 
   _pickerCallback(accessToken, data) {
 
-    if (data[google.picker.Response.ACTION] === google.picker.Action.PICKED) {
-      const event = new CustomEvent("pick", { detail: { data: data, accessToken: accessToken } });
-      this.element.dispatchEvent(event);
+    switch (data[google.picker.Response.ACTION]) {
+      case google.picker.Action.PICKED:
+        const event = new CustomEvent("pick", { detail: { data: data, accessToken: accessToken } });
+        this.element.dispatchEvent(event);
+        break;
+      case google.picker.Action.CANCEL:
+        this.element.dispatchEvent(new Event("cancel"));
+        break;
     }
 
     this.element.disabled = false;
